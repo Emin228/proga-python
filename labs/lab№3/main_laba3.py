@@ -1,6 +1,6 @@
 from pprint import pprint
 
-def gen_bin_tree(height=3, Root=13):
+def gen_bin_tree(height=3, Root=13) -> dict:
 
     if height <= 1:
         return {"value": Root, "left": None, "right": None}
