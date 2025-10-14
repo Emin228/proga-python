@@ -1,12 +1,41 @@
 from pprint import pprint
+"""Подключение библиотеки pprint для более коректного вывода результата"""
+def gen_bin_tree(height='3', Root='13') -> dict:
 
-def gen_bin_tree(height=3, Root=13) -> dict:
+    """
+    Рекурсивно генерирует бинарное дерево заданной высоты.
 
-    if height <= 1:
+    Каждый узел дерева представлен в виде словаря с ключами:
+    - "value": значение текущего узла;
+    - "left": левое поддерево (или None, если достигнут лист);
+    - "right": правое поддерево (или None, если достигнут лист).
+
+    При каждой рекурсии значение левого потомка увеличивается на 1,
+    а правого уменьшается на 1 относительно значения родительского узла.
+
+    Parameters:
+    height : int | str, optional
+        Высота дерева. Если указана строка, автоматически преобразуется в int.
+        По умолчанию 3.
+    Root : int | str, optional
+        Значение корневого узла. Если указана строка, автоматически преобразуется в int.
+        По умолчанию 13.
+
+    Returns:
+  
+    dict
+        Словарь, описывающий структуру бинарного дерева.
+    """
+
+    if int(height) <= 1:
         return {"value": Root, "left": None, "right": None}
+    """Проверка, что значение узла превышет 1, для корректной работы """
     
-    left_child = gen_bin_tree(height - 1, Root + 1)
-    right_child = gen_bin_tree(height - 1, Root - 1)
+    left_child = gen_bin_tree(int(height) - 1, int(Root) + 1)
+    right_child = gen_bin_tree(int(height) - 1, int(Root) - 1)
+    """
+    Расчёт правого и левого поддерева
+    """
 
     return {
         "value": Root,
