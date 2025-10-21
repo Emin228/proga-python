@@ -51,4 +51,5 @@ class TestMath(unittest.TestCase):
 
 
 # Запуск тестов
-unittest.main(argv=[''], verbosity=2, exit=False)
+
+unittest.main()
