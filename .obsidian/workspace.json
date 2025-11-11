@@ -1,41 +1,69 @@
 {
   "main": {
-    "id": "7b968e271f6a0abf",
+    "id": "fd3c5cb65f96b372",
     "type": "split",
     "children": [
       {
-        "id": "212dc206880c21c8",
+        "id": "263046a9b9736093",
         "type": "tabs",
         "children": [
           {
-            "id": "5646db0389e11e8f",
+            "id": "10b905af3127c76e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Отчёт по лабораторной работе №2.md",
+                "file": "labs/lab№4/Отчёт по лабораторной работе №4.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Отчёт по лабораторной работе №2"
+              "title": "Отчёт по лабораторной работе №4"
+            }
+          },
+          {
+            "id": "53e98bb41fe28b70",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "labs/lab№6/Отчёт по лабораторной работе №6.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Отчёт по лабораторной работе №6"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "770b86c617087b84",
+    "id": "e6f65a5db61818c7",
     "type": "split",
     "children": [
       {
-        "id": "b417c29636590f05",
+        "id": "011842ff7f2f2fed",
         "type": "tabs",
         "children": [
           {
-            "id": "67e82ae8f03cf8fe",
+            "id": "57feefd88ef3f43a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "16985b78e76633cb",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -52,7 +80,7 @@
             }
           },
           {
-            "id": "aca784c7f1d5dfde",
+            "id": "124f390493fa8a9f",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -60,41 +88,28 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
-          },
-          {
-            "id": "7eb786572efc7a9b",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
     "width": 300
   },
   "right": {
-    "id": "6428991bdac33f2b",
+    "id": "8edde519e747ed4b",
     "type": "split",
     "children": [
       {
-        "id": "f002ab2e95b6e6ec",
+        "id": "05cea57286910670",
         "type": "tabs",
         "children": [
           {
-            "id": "1d5360921d635405",
+            "id": "d60639cf9357cb5f",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "labs/laba№5/Отчёт по лабораторной работе №5.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,24 +119,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Отчёт по лабораторной работе №5"
             }
           },
           {
-            "id": "8e55d8fafe99a7b4",
+            "id": "c4fbb30bc01dd882",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "labs/laba№5/Отчёт по лабораторной работе №5.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Отчёт по лабораторной работе №5"
             }
           },
           {
-            "id": "151078c942031120",
+            "id": "e6138a4f29bdf650",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -136,17 +152,18 @@
             }
           },
           {
-            "id": "67fad88977fead3d",
+            "id": "d034042cefe6c490",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+                "file": "labs/laba№5/Отчёт по лабораторной работе №5.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Отчёт по лабораторной работе №5"
             }
           }
         ]
@@ -167,21 +184,25 @@
       "bases:Create new base": false
     }
   },
-  "active": "5646db0389e11e8f",
+  "active": "57feefd88ef3f43a",
   "lastOpenFiles": [
-    "Untitled.base",
-    "Отчёт по лабораторной работе №2.md",
+    "labs/lab№6/test.py",
+    "labs/lab№6/main.py",
     "Untitled",
-    "Untitled 1.canvas",
-    "Untitled.canvas",
-    "Untitled 2.canvas",
-    "Untitled 9.base",
-    "Untitled 8.base",
-    "Untitled 7.base",
-    "Untitled 6.base",
-    "Untitled 5.base",
-    "Untitled 4.base",
-    "Untitled 3.base",
-    "Untitled 2.base"
+    "labs/laba№5/Отчёт по лабораторной работе №5.md",
+    "labs/lab№6/Отчёт по лабораторной работе №6.md",
+    "labs/lab№6",
+    "labs/laba№5/__pycache__/lruEmin.cpython-313.pyc",
+    "labs/laba№5/x.py",
+    "labs/laba№5/lruEmin.py",
+    "Pasted image 20251028235845.png",
+    "Pasted image 20251028235007.png",
+    "Pasted image 20251028234916.png",
+    "Pasted image 20251028234612.png",
+    "Pasted image 20251028234528.png",
+    "labs/lab№2/Отчёт по лабораторной работе №2.md",
+    "Untitled.md",
+    "labs/lab№4/Отчёт по лабораторной работе №4.md",
+    "labs/lab№3/Отчёт по лабораторной работе №3.md"
   ]
 }

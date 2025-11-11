@@ -1,7 +1,7 @@
 from typing import Callable
 from pprint import pprint
 
-def gen_bin_tree(height=3, Root=13, 
+def gen_bin_tree(height='3', Root='13', 
                  left_leaf: Callable[[float], float] = lambda x: x + 1, 
                  right_leaf: Callable[[float], float] = lambda y: y ** 2):
     """
