@@ -6,7 +6,7 @@ def log(func):
 
     logging.basicConfig(
         level=logging.INFO,
-        filename="lab_6/logs.log",
+        filename="logs.log",
         filemode="a",
         encoding="utf-8",
         format="%(asctime)s [%(levelname)s] %(message)s",
@@ -47,10 +47,16 @@ def main(
 
     if currency_codes is None:
         currency_codes = list(data["Valute"].keys())
-
+    print(list(data["Valute"].keys()))
+    print(currency_codes)
     for code in currency_codes:
         if code in data["Valute"]:
             result[code] = data["Valute"][code]["Value"]
         else:
             logging.warning(f"В ответе нет данных о валюте с ключом: {code}")
     return result
+
+if __name__ == "__main__":  
+    result = main(["USD", "EUR", "IDR"])  
+    print(result)
+    
