@@ -47,8 +47,7 @@ def main(
 
     if currency_codes is None:
         currency_codes = list(data["Valute"].keys())
-    print(list(data["Valute"].keys()))
-    print(currency_codes)
+
     for code in currency_codes:
         if code in data["Valute"]:
             result[code] = data["Valute"][code]["Value"]
