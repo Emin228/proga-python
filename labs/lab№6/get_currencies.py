@@ -3,7 +3,6 @@ import requests
 
 
 def log(func):
-
     logging.basicConfig(
         level=logging.INFO,
         filename="logs.log",
@@ -11,7 +10,7 @@ def log(func):
         encoding="utf-8",
         format="%(asctime)s [%(levelname)s] %(message)s",
     )
-
+                                    
     def wrapper(*args, **kwargs):
         try:
             return func(*args, **kwargs)
@@ -27,23 +26,33 @@ def log(func):
         except ValueError:
             logging.error("Ошибка формата данных (JSON повреждён или пустой)")
             return None
+        
+
 
     return wrapper
 
 
 @log
-def main(
+def get_currencies(
     currency_codes=None, url="https://www.cbr-xml-daily.ru/daily_json.js"
 ):
-
-    response = requests.get(url)
-    response.raise_for_status()
-
-    data = response.json()
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+    except requests.exceptions.RequestException:
+        logging.error("Неккоретный url")
+        return None
+    
+    try:
+        data = response.json()
+    except requests.exceptions.JSONDecodeError:
+        logging.error("Ошибка при запросе json")
+        return None
+    
     result = {}
 
     if "Valute" not in data:
-        raise KeyError
+        raise KeyError("Отсутствует ключ 'Valute' в JSON-ответе от API")
 
     if currency_codes is None:
         currency_codes = list(data["Valute"].keys())
@@ -56,6 +65,6 @@ def main(
     return result
 
 if __name__ == "__main__":  
-    result = main(["USD", "EUR", "IDR"])  
+    result = get_currencies(["USD", "EUR", "IDR"])  
     print(result)
-    
+ 

@@ -3,7 +3,7 @@ from unittest.mock import patch, MagicMock
 import os
 import requests
 
-from main import main
+from get_currencies import get_currencies;
 
 
 class TestGetCurrencies(unittest.TestCase):
@@ -24,7 +24,7 @@ class TestGetCurrencies(unittest.TestCase):
         mock_response.raise_for_status.return_value = None
         mock_get.return_value = mock_response
 
-        result = main(["USD", "EUR"])
+        result = get_currencies(["USD", "EUR"])
 
         self.assertIsInstance(result, dict)
         self.assertIn("USD", result)
@@ -37,8 +37,9 @@ class TestGetCurrencies(unittest.TestCase):
     def test_api_exception(self, mock_get):
         """Проверяем, что RequestException обрабатывается корректно"""
         mock_get.side_effect = requests.exceptions.RequestException("Ошибка API")
-        result = main(["USD"])
+        result = get_currencies(["USD"])
         self.assertIsNone(result)
+
 
     #  3. Проверка логирования 
     @patch("get_currencies.requests.get")
@@ -49,7 +50,7 @@ class TestGetCurrencies(unittest.TestCase):
         mock_response.raise_for_status.return_value = None
         mock_get.return_value = mock_response
 
-        result = main(["USD", "ABC"])
+        result = get_currencies(["USD", "ABC"])
         self.assertIn("USD", result)
         self.assertNotIn("ABC", result)
 
