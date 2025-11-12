@@ -55,7 +55,7 @@ class TestGetCurrencies(unittest.TestCase):
         self.assertNotIn("ABC", result)
 
         # Проверяем, что лог действительно содержит предупреждение
-        with open("lab_6/logs.log", "r", encoding="utf-8") as f:
+        with open("logs.log", "r", encoding="utf-8") as f:
             log_text = f.read()
         self.assertIn("В ответе нет данных о валюте с ключом: ABC", log_text)
 
